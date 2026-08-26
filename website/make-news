@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Make the news section
+#
+# Author: Dave Eddy <dave@daveeddy.com>
+# Date: December 06, 2025
+# License: MIT
+
+. ./colors || exit
+
+{
+echo -n "${COLOR4}2026-08-12 ${COLOR5}Portfolio ${COLOR3}v1.0${RST}"
+echo " ${COLOR5}released${RST}"
+} | ./tools/box -hp 1 -vp 1 -tc "$COLOR5" -t 'News' -bc "$COLOR4" -T plain

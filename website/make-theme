@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+#
+# creates the "theme" file you can curl
+#
+# # Created
+# Author: Dave Eddy <ysap@daveeddy.com>
+# Date: March 11, 2026
+# License: MIT
+#
+# # Contributors
+# - Dave Eddy <ysap@daveeddy.com>
+
+# these are in the form of "OSC 4 ANSI Code" => "Color"
+theme_keys=(
+	'4;0' '4;1' '4;2' '4;3' '4;4' '4;5' '4;6' '4;7'
+	'4;8' '4;9' '4;10' '4;11' '4;12' '4;13' '4;14' '4;15'
+	'10' '11' '12' '17' '19'
+)
+theme_vals=(
+	'#000000' '#b83019' '#51bf37' '#c6c43d' '#0c24bf' '#b93ec1' '#53c2c5' '#c7c7c7'
+	'#676767' '#ef766d' '#8cf67a' '#fefb7e' '#6a71f6' '#f07ef8' '#8ef9fd' '#feffff'
+	'#f7f7f7' '#000000' '#c7c7c7' '#c6dcfc' '#000000'
+)
+
+echo -n '> applying ysap theme... '
+for ((i = 0; i < ${#theme_keys[@]}; i++)); do
+	code=${theme_keys[i]}
+	color=${theme_vals[i]}
+
+	printf '\e]%s;%s\e\\' "$code" "$color"
+done
+echo done
+
+./make-logo | ./tools/box -hp 1 -T plain

@@ -1,0 +1,106 @@
+# #!/usr/bin/env bash
+# #
+# # Print the YSAP logo
+# #
+# # # Created
+# # Author: Dave Eddy <ysap@daveeddy.com>
+# # Date: April 05, 2025
+# # License: MIT
+# #
+# # # Contributors
+# # - Dave Eddy <ysap@daveeddy.com>
+# # - Joshua Rayton <joshua.rayton@gmail.com>
+
+# . ./colors || exit
+
+# COLOR6=$'\e[48;5;223m'          # off-white (background)
+# COLOR7=$'\e[38;5;160m'          # red
+# COLOR8=$'\e[38;5;214;48;5;202m' # yellow (text) orange (background)
+
+# LOGO=()
+# while IFS= read -r line; do
+# 	LOGO+=("$line")
+# done << EOF
+# AA  AA  AAAA     AAA   AAAAA 
+# CC  CC CC  BB  ACB BCA CC  CC
+#  BCCB   BBBBCA CCAAACC CCAACB
+#   CC   BCAAACB CC   CC CC    
+# DDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+# EEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+# EOF
+
+# for line in "${LOGO[@]}"; do
+# 	line=$(echo "$line" | sed -E -e "s/[AB]+/$COLOR5&$RST/g" \
+# 	                            -e "s/C+/$COLOR6&$RST/g" \
+# 	                            -e "s/D+/$COLOR7&$RST/g" \
+# 	                            -e "s/E+/$COLOR8&$RST/g")
+
+# 	line=${line//[ADE]/▄}
+# 	line=${line//B/▀}
+# 	line=${line//C/ }
+
+# 	echo "$line"
+# done
+
+
+#!/usr/bin/env bash
+#
+# Print the MHP logo
+#
+# Based on YSAP's make-logo
+#
+# Original Author:
+# Dave Eddy <ysap@daveeddy.com>
+#
+# Original License: MIT
+#
+
+. ./colors || exit
+
+COLOR6=$'\e[48;5;223m'          # off-white background
+COLOR7=$'\e[38;5;160m'          # red
+COLOR8=$'\e[38;5;214;48;5;202m' # yellow text / orange background
+
+LOGO=()
+
+while IFS= read -r line; do
+    LOGO+=("$line")
+done << 'EOF'
+AA   AA   AA   AA   AAAAAA   
+CC A CC   CC   CC   CC   CC  
+CC C CC   CCCCCCC   CCCCCC   
+CC   CC   CC   CC   CC       
+CC   CC   CC   CC   CC       
+BB   BB   BB   BB   BB    .sh
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+EOF
+
+for line in "${LOGO[@]}"; do
+
+    line=$(echo "$line" | sed -E \
+        -e "s/[AB]+/$COLOR5&$RST/g" \
+        -e "s/C+/$COLOR6&$RST/g" \
+        -e "s/D+/$COLOR7&$RST/g" \
+        -e "s/E+/$COLOR8&$RST/g")
+
+    #
+    # Same rendering trick as YSAP:
+    #
+    # A = lower half-block
+    # B = upper half-block
+    # C = full cream block using background color
+    # D = red lower half-block
+    # E = yellow lower half-block with orange background
+    #
+
+    line=${line//[ADE]/▄}
+    line=${line//B/▀}
+    line=${line//C/ }
+
+    # Small .sh signature
+    line=${line//.sh/$COLOR7.sh$RST}
+
+    echo "$line"
+
+done

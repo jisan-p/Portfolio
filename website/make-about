@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#
+# Print the "about" message formatted how I like it - this output is intended to
+# be piped into `tools/box`
+#
+# Author: Dave Eddy <dave@daveeddy.com>
+# Date: April 05, 2025
+# License: MIT
+
+. ./colors || exit 1
+
+ABOUT=(
+	"CSE student @ IUT."
+	"Interested in systems,"
+	"algorithms, embedded tech,"
+	"and understanding computers"
+	"a little deeper every day."
+)
+
+for line in "${ABOUT[@]}"; do
+	echo "$COLOR1$line$RST"
+done
