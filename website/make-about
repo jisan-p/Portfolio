@@ -10,13 +10,31 @@
 . ./colors || exit 1
 
 ABOUT=(
-	"CSE student @ IUT."
-	"Interested in systems,"
-	"algorithms, embedded tech,"
-	"and understanding computers"
-	"a little deeper every day."
+    "Hey, what's up? I'm Jisan."
+    "i'm opening those black boxes"
+	"just to see inside."
 )
+
 
 for line in "${ABOUT[@]}"; do
 	echo "$COLOR1$line$RST"
 done
+
+
+# ABOUT=(
+# 	"CSE student @ IUT."
+# 	"Interested in systems,"
+# 	"algorithms, embedded tech,"
+# 	"and understanding computers"
+# 	"a little deeper every day."
+# )
+
+
+# ABOUT=(
+# 	"Hello, what's up my name's Jisan"
+# 	"and i am interested in systems,"
+#     "algorithms, embedded tech, and exploring"
+#     "machine learning and intelligent systems."
+#     "I like understanding how things work"
+#     "a little deeper every day."
+# )

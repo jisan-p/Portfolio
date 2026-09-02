@@ -9,8 +9,8 @@
 . ./colors || exit
 
 {
-./make-header -p 7 |
-    ./tools/box -hp 4 -T plain
+./make-header -p 5 |
+    ./tools/box -hp 1 -T plain
 
 ./make-news
 
