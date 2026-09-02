@@ -11,7 +11,7 @@
 SOCIALS=(
 	"GitHub|https://github.com/jisan-p"
 	"LinkedIn|https://linkedin.com/in/jisan"
-	"Email|mehedul@iut-dhaka.edu"
+	"Email|mehedulhasan@iut-dhaka.edu"
 )
 
 UNDERLINE=$'\x1b[3m'
