@@ -49,18 +49,18 @@ while getopts 'f' opt; do
 done
 
 legend=(
-	'$ curl mhpx.pages.dev%whoami'
-	'$ curl mhpx.pages.dev/about%the longer story'
-	'$ curl mhpx.pages.dev/projects%things I'"'"'ve built'
-	'$ curl mhpx.pages.dev/skills%my toolbox'
-	'$ curl mhpx.pages.dev/contact%open a connection'
+	'$ curl -L mhpx.pages.dev%whoami'
+	'$ curl -L mhpx.pages.dev/about%the longer story'
+	'$ curl -L mhpx.pages.dev/projects%things I'"'"'ve built'
+	'$ curl -L mhpx.pages.dev/skills%my toolbox'
+	'$ curl -L mhpx.pages.dev/contact%open a connection'
 )
 resources=()
 extras=()
 
 if $full; then
 	legend+=(
-		'$ curl mhpx.pages.dev/help%Get the full list of available endpoints'
+		'$ curl -L mhpx.pages.dev/help%Get the full list of available endpoints'
 	)
 fi
 
