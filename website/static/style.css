@@ -38,6 +38,10 @@ ul {
 	color: var(--color3);
 }
 
+.highlight-alt {
+	color: var(--color1);
+}
+
 .hidden {
 	display: none;
 }
