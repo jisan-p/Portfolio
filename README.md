@@ -1,13 +1,12 @@
 # mhpx.pages.dev
 
-An interactive, terminal-inspired portfolio website for Mehedul Hasan Prodhan (CSE @ IUT). 
-Engineered with dual-interface support, it can be viewed beautifully in any modern web browser or fetched directly from a command-line terminal using `curl`.
+A terminal-inspired portfolio website, engineered with dual-interface support, it can be viewed in any modern web browser or fetched directly from a command-line terminal using `curl`.
 
 <!-- Add your screenshot below! -->
-![Terminal Screenshot](screenshot.png)
+<img width="1216" height="666" alt="Image" src="https://github.com/user-attachments/assets/48ae7a9e-c67c-4910-a785-21d1d172295e" />
 
 ## Features
-- **Browser UI:** A nostalgic, animated terminal typing effect with syntax highlighting.
+- **Browser UI:** Animated terminal typing effect with syntax highlighting.
 - **Terminal CLI:** Pure ASCII output powered by Cloudflare Pages routing based on the `User-Agent`.
 - **Fast & Static:** Fully static bash generation using `make`.
 
