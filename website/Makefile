@@ -17,7 +17,7 @@ build: ## default target, builds the site into ./_site
 	# disable indexing for certain dirs
 	echo -n > _site/static/index.html
 	# copy static files
-	cat static/favicon.svg > _site/favicon.svg
+	cat static/favicon.svg > _site/static/favicon.svg
 	cat static/robots.txt > _site/robots.txt
 	cat static/Me.jpg > _site/static/Me.jpg
 	cat static/style.css > _site/static/style.css
