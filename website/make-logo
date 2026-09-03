@@ -67,8 +67,8 @@ while IFS= read -r line; do
     LOGO+=("$line")
 done << 'EOF'
  AA   AA  AA   AA  AAAAAA          
- CC A CC  CC   CC  CC   CC         
- CC C CC  CCCCCCC  CCCCCC          
+ CCCACCC  CC   CC  CC   CC         
+ CC   CC  CCCCCCC  CCCCCC          
  CC   CC  CC   CC  CC              
  BB   BB  BB   BB  BB    .pages.dev
 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
