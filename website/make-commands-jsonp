@@ -15,12 +15,20 @@ inputs=()
 for ((i = 0; i < ${#cmd_keys[@]}; i++)); do
 	cmd=${cmd_keys[i]}
 	output=${cmd_vals[i]}
-	s=$(jq -cnR --arg cmd "$cmd" '{
-	    "cmd": $cmd,
-	    "lines": [inputs]
-	}' <<< "$output") || exit 1
+	s=$(python3 -c '
+import sys, json
+cmd = sys.argv[1]
+lines = sys.stdin.read().split("\n")
+if lines and lines[-1] == "":
+    lines.pop()
+print(json.dumps({"cmd": cmd, "lines": lines}))
+' "$cmd" <<< "$output") || exit 1
 	inputs+=("$s")
 done
 
-json=$(printf '%s\n' "${inputs[@]}" | jq -cn '[inputs]') || exit 1
+json=$(printf '%s\n' "${inputs[@]}" | python3 -c '
+import sys, json
+lines = [json.loads(line) for line in sys.stdin.read().split("\n") if line]
+print(json.dumps(lines))
+') || exit 1
 echo "const COMMANDS = $json;"
