@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+. ./colors || exit
+
+{
+./make-header -p 5 | ./tools/box -hp 1 -T plain
+
+echo
+{
+    echo "${COLOR5}The best way to get in touch with me is via email.${RST}"
+    echo "${COLOR5}Feel free to reach out for collaborations, questions, or just to say hi!${RST}"
+    echo
+    echo "${COLOR5}Email:    ${COLOR1}mehedulhasan@iut-dhaka.edu${RST}"
+    echo "${COLOR5}GitHub:   ${COLOR1}https://github.com/jisan-p${RST}"
+    echo "${COLOR5}LinkedIn: ${COLOR1}https://linkedin.com/in/jisan${RST}"
+} | ./tools/box -hp 2 -vp 1 -bc "$COLOR4" -tc "$COLOR5" -s '|' -t 'Contact'
+
+echo
+./make-legend
+
+} | ./tools/rtrim-ansi-aware

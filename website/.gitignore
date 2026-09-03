@@ -1,6 +1,6 @@
 _site
-static/favicon.ico
-static/favicon.jpg
-static/ysap.png
+.DS_Store
 run.md
 run.txt
+instruction.txt
+learn.md

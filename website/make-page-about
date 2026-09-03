@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+. ./colors || exit
+
+{
+./make-header -p 5 | ./tools/box -hp 1 -T plain
+
+echo
+{
+    echo "${COLOR5}I am a CSE student at the Islamic University of Technology (IUT).${RST}"
+    echo
+    echo "${COLOR5}I have a passion for lower-level programming, Linux systems, and creating clean architectures.${RST}"
+    echo "${COLOR5}When I'm not writing bash scripts or debugging C code, I enjoy exploring new technologies${RST}"
+    echo "${COLOR5}and writing tools that make developer life easier.${RST}"
+} | ./tools/box -hp 2 -vp 1 -bc "$COLOR4" -tc "$COLOR5" -s '|' -t 'About Me'
+
+echo
+./make-legend
+
+} | ./tools/rtrim-ansi-aware

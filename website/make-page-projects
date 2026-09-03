@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+. ./colors || exit
+
+{
+./make-header -p 5 | ./tools/box -hp 1 -T plain
+
+echo
+{
+    echo "${COLOR3}Bash Web Server${RST}"
+    echo "${COLOR5}A simple web server written entirely in bash using netcat.${RST}"
+    echo
+    echo "${COLOR3}CLI Portfolio${RST}"
+    echo "${COLOR5}An interactive terminal-based portfolio inspired by ysap.sh.${RST}"
+    echo "${COLOR5}Supports routing and User-Agent detection.${RST}"
+} | ./tools/box -hp 2 -vp 1 -bc "$COLOR4" -tc "$COLOR5" -s '|' -t 'Projects'
+
+echo
+./make-legend
+
+} | ./tools/rtrim-ansi-aware

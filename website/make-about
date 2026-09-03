@@ -10,9 +10,9 @@
 . ./colors || exit 1
 
 ABOUT=(
-    "Hey, what's up? I'm Jisan."
-    "i'm opening those black boxes"
-	"just to see inside."
+    "Hey, what's up? I'm Jisan,"
+    "usually opening black boxes"
+    "just to see what's inside."
 )
 
 

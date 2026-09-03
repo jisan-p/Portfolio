@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Generate the page as seen by `curl ysap.sh/help`
+# Generate the page as seen by `curl mhpx.pages.dev/help`
 #
 # Author: Dave Eddy <dave@daveeddy.com>
 # Date: April 05, 2025

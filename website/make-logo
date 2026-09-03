@@ -66,11 +66,11 @@ LOGO=()
 while IFS= read -r line; do
     LOGO+=("$line")
 done << 'EOF'
-AA   AA  AA   AA  AAAAAA          
-CCCACCC  CC   CC  CC   CC         
-CC   CC  CCCCCCC  CCCCCC          
-CC   CC  CC   CC  CC              
-BB   BB  BB   BB  BB    x.pages.dev
+AA   AA  AA   AA  AAAAAA           
+CCCACCC  CC   CC  CC   CC          
+CC   CC  CCCCCCC  CCCCCC           
+CC   CC  CC   CC  CC               
+BB   BB  BB   BB  BB    F
 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 EOF
@@ -97,7 +97,7 @@ for line in "${LOGO[@]}"; do
     line=${line//B/▀}
     line=${line//C/ }
 
-
+    line=${line//F/${COLOR7}x.pages.dev${RST}}
 
     echo "$line"
 
