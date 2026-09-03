@@ -21,7 +21,7 @@ Open your terminal and run:
 curl -L mhpx.pages.dev
 ```
 > [!NOTE]
-> If you're on a balcony (Windows), use `curl.exe -L mhpx.pages.dev` instead!
+> If you're on Windows, use `curl.exe -L mhpx.pages.dev` instead!
 
 Explore the different pages directly from the command line:
 - `curl -L mhpx.pages.dev/about`
