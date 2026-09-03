@@ -8,7 +8,7 @@
 # License: MIT
 
 # we can declare multiple commands here, but for now i just like having 1
-cmd_keys=('curl mhp.pages.dev')
+cmd_keys=('curl mhpx.pages.dev')
 cmd_vals=("$(./make-index | ./tools/bansi-to-html -H)")
 
 inputs=()
