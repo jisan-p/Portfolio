@@ -11,7 +11,7 @@ echo
     echo
     echo "${COLOR5}Islamic University of Technology (IUT)${RST}"
     echo "${COLOR5}B.Sc. in Computer Science & Engineering${RST}"
-    echo "${COLOR4}2023 — Present${RST}"
+    echo "${COLOR4}2023 - Present${RST}"
     echo
     echo "${COLOR3}> areas of interest${RST}"
     echo
@@ -24,7 +24,7 @@ echo
     echo "${COLOR3}> research interests${RST}"
     echo
     echo "${COLOR5}Currently exploring systems, embedded computing,${RST}"
-    echo "${COLOR5}and machine learning — trying to figure out what${RST}"
+    echo "${COLOR5}and machine learning - trying to figure out what${RST}"
     echo "${COLOR5}problems are worth working on more deeply.${RST}"
 } | ./tools/box -hp 2 -vp 1 -bc "$COLOR4" -tc "$COLOR5" -s '|' -t 'Academics'
 

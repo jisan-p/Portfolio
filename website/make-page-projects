@@ -31,7 +31,7 @@ print_project() {
         links+="[${status}] "
     fi
     if [ -n "$source" ]; then
-        links+="[source → ${COLOR1}${source}${RST}]"
+        links+="[source -> ${COLOR1}${source}${RST}]"
     fi
     if [ -n "$links" ]; then
         echo "${links}"
@@ -40,14 +40,14 @@ print_project() {
 }
 
 print_project "Flock" "A terminal-based client-server chat application built primarily in C++.
-Features: User accounts · Profiles · Messaging · File transfer · Group chat
-          Client/server architecture · Terminal UI · Persistent storage" "C++ · Networking · Terminal UI" "" "https://github.com/jisan-p/Flock"
+Features: User accounts - Profiles - Messaging - File transfer - Group chat
+          Client/server architecture - Terminal UI - Persistent storage" "C++ - Networking - Terminal UI" "" "https://github.com/jisan-p/Flock"
 
 print_project "mhpx.pages.dev" "A dual-interface portfolio that behaves as a normal
 website in a browser and as an ANSI terminal page
-when fetched with curl." "Bash · HTML · CSS · JavaScript · Cloudflare Pages" "" "https://github.com/jisan-p/Portfolio"
+when fetched with curl." "Bash - HTML - CSS - JavaScript - Cloudflare Pages" "" "https://github.com/jisan-p/Portfolio"
 
-print_project "Flux Browser" "An experimental web browser built in Java — mostly to see
+print_project "Flux Browser" "An experimental web browser built in Java - mostly to see
 how far you can get building one from scratch." "Java" "" "https://github.com/jisan-p/Flux-Browser"
 
 print_project "Cache Controller" "A cache controller simulation written in Rust." "Rust" "" "https://github.com/jisan-p/Cache_controller"
