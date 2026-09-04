@@ -68,10 +68,6 @@ cd website && make build
 ```
 And the output directory: `website/_site`
 
-## AI Usage
-
-This project was built with the assistance of AI tools. For full disclosure and prompt history, see [AI_USAGE.md](AI_USAGE.md).
-
 ## Credits & License
 
 The terminal aesthetic, bash-generation architecture, and original core scripts were heavily inspired by and adapted from the open-source [YSAP](https://github.com/bahamas10/ysap) project created by Dave Eddy ([@bahamas10](https://github.com/bahamas10)).
