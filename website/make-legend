@@ -52,7 +52,7 @@ legend=(
 	'$ curl -L mhpx.pages.dev%whoami'
 	'$ curl -L mhpx.pages.dev/about%the longer story'
 	'$ curl -L mhpx.pages.dev/projects%things I'"'"'ve built'
-	'$ curl -L mhpx.pages.dev/skills%my toolbox'
+	'$ curl -L mhpx.pages.dev/academics%studies & interests'
 	'$ curl -L mhpx.pages.dev/contact%open a connection'
 )
 resources=()

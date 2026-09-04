@@ -7,12 +7,51 @@
 
 echo
 {
-    echo "${COLOR3}Bash Web Server${RST}"
-    echo "${COLOR5}A simple web server written entirely in bash using netcat.${RST}"
+
+print_project() {
+    local name="$1"
+    local desc="$2"
+    local tech="$3"
+    local status="$4"
+    local source="$5"
+
+    echo "${COLOR3}${name}${RST}"
+    while IFS= read -r line; do
+        if [ -n "$line" ]; then
+            echo "${COLOR5}${line}${RST}"
+        fi
+    done <<< "$desc"
+    
+    if [ -n "$tech" ]; then
+        echo "${COLOR4}${tech}${RST}"
+    fi
+    
+    local links=""
+    if [ -n "$status" ]; then
+        links+="[${status}] "
+    fi
+    if [ -n "$source" ]; then
+        links+="[source → ${COLOR1}${source}${RST}]"
+    fi
+    if [ -n "$links" ]; then
+        echo "${links}"
+    fi
     echo
-    echo "${COLOR3}CLI Portfolio${RST}"
-    echo "${COLOR5}An interactive terminal-based portfolio inspired by ysap.sh.${RST}"
-    echo "${COLOR5}Supports routing and User-Agent detection.${RST}"
+}
+
+print_project "Flock" "A terminal-based client-server chat application built primarily in C++.
+Features: User accounts · Profiles · Messaging · File transfer · Group chat
+          Client/server architecture · Terminal UI · Persistent storage" "C++ · Networking · Terminal UI" "" "https://github.com/jisan-p/Flock"
+
+print_project "mhpx.pages.dev" "A dual-interface portfolio that behaves as a normal
+website in a browser and as an ANSI terminal page
+when fetched with curl." "Bash · HTML · CSS · JavaScript · Cloudflare Pages" "" "https://github.com/jisan-p/Portfolio"
+
+print_project "Flux Browser" "An experimental web browser built in Java — mostly to see
+how far you can get building one from scratch." "Java" "" "https://github.com/jisan-p/Flux-Browser"
+
+print_project "Cache Controller" "A cache controller simulation written in Rust." "Rust" "" "https://github.com/jisan-p/Cache_controller"
+
 } | ./tools/box -hp 2 -vp 1 -bc "$COLOR4" -tc "$COLOR5" -s '|' -t 'Projects'
 
 echo

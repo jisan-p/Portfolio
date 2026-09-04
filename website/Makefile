@@ -13,7 +13,7 @@ help:
 
 .PHONY: build
 build: ## default target, builds the site into ./_site
-	mkdir -p _site _site/contact _site/static _site/about _site/projects _site/skills
+	mkdir -p _site _site/contact _site/static _site/about _site/projects _site/academics
 	# disable indexing for certain dirs
 	echo -n > _site/static/index.html
 	# copy static files
@@ -27,7 +27,7 @@ build: ## default target, builds the site into ./_site
 	cat static/contact.html > _site/contact/index.html
 	cat static/about.html > _site/about/index.html
 	cat static/projects.html > _site/projects/index.html
-	cat static/skills.html > _site/skills/index.html
+	cat static/academics.html > _site/academics/index.html
 	# copy worker files
 	cat static/_worker.js > _site/_worker.js
 	cat static/_routes.json > _site/_routes.json
@@ -40,7 +40,7 @@ build: ## default target, builds the site into ./_site
 	# create ASCII subpages for curl users
 	./make-page-about > _site/about/index.txt
 	./make-page-projects > _site/projects/index.txt
-	./make-page-skills > _site/skills/index.txt
+	./make-page-academics > _site/academics/index.txt
 	./make-page-contact > _site/contact/index.txt
 	# create ASCII help page
 	./make-help > _site/help

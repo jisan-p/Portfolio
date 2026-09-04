@@ -18,7 +18,7 @@ export default {
         "/": "/index.txt",
         "/about": "/about/index.txt",
         "/projects": "/projects/index.txt",
-        "/skills": "/skills/index.txt",
+        "/academics": "/academics/index.txt",
         "/contact": "/contact/index.txt",
         "/help": "/help",
         "/ping": "/ping"

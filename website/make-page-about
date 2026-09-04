@@ -7,12 +7,36 @@
 
 echo
 {
-    echo "${COLOR5}I am a CSE student at the Islamic University of Technology (IUT).${RST}"
+    echo "${COLOR5}I'm Mehedul Hasan Prodhan, a CSE student at IUT.${RST}"
     echo
-    echo "${COLOR5}I have a passion for lower-level programming, Linux systems, and creating clean architectures.${RST}"
-    echo "${COLOR5}When I'm not writing bash scripts or debugging C code, I enjoy exploring new technologies${RST}"
-    echo "${COLOR5}and writing tools that make developer life easier.${RST}"
+    echo "${COLOR5}I'm interested in systems, algorithms, embedded technology,${RST}"
+    echo "${COLOR5}and increasingly machine learning. I tend to enjoy things${RST}"
+    echo "${COLOR5}most when I can open the black box and understand what's${RST}"
+    echo "${COLOR5}actually happening underneath.${RST}"
+    echo
+    echo "${COLOR5}Right now I'm exploring different areas of computing while${RST}"
+    echo "${COLOR5}building things along the way.${RST}"
 } | ./tools/box -hp 2 -vp 1 -bc "$COLOR4" -tc "$COLOR5" -s '|' -t 'About Me'
+
+echo
+{
+    echo "${COLOR3}Languages:${RST}"
+    echo "${COLOR5}- Bash / Shell Scripting${RST}"
+    echo "${COLOR5}- C / C++${RST}"
+    echo "${COLOR5}- Python${RST}"
+    echo "${COLOR5}- JavaScript / HTML / CSS${RST}"
+    echo "${COLOR5}- Java${RST}"
+    echo
+    echo "${COLOR3}Tools & Platforms:${RST}"
+    echo "${COLOR5}- Linux / Unix (macOS)${RST}"
+    echo "${COLOR5}- Git & GitHub${RST}"
+    echo "${COLOR5}- Docker${RST}"
+    echo
+    echo "${COLOR3}Exploring:${RST}"
+    echo "${COLOR5}- Machine Learning${RST}"
+    echo "${COLOR5}- Embedded Systems${RST}"
+    echo "${COLOR5}- Systems Programming${RST}"
+} | ./tools/box -hp 2 -vp 1 -bc "$COLOR4" -tc "$COLOR5" -s '|' -t 'Skills'
 
 echo
 ./make-legend
