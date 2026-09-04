@@ -67,11 +67,3 @@ Any push to the `main` branch is automatically built and deployed by Cloudflare 
 cd website && make build
 ```
 And the output directory: `website/_site`
-
-## Credits & License
-
-The terminal aesthetic, bash-generation architecture, and original core scripts were heavily inspired by and adapted from the open-source [YSAP](https://github.com/bahamas10/ysap) project created by Dave Eddy ([@bahamas10](https://github.com/bahamas10)).
-
-This project is open source and available under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
-
-The "MHP" branding, personal content, portfolio structure, Cloudflare deployment/routing behavior, and other modifications were created specifically for this portfolio.
